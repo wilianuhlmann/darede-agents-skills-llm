@@ -35,90 +35,90 @@ Creates and maintains a standardized `.ai/` documentation structure for backend,
 
 ## How to Add a New Skill
 
-Follow these steps to add uma nova skill ao repositório, mantendo o padrão existente:
+Follow these steps to add a new skill to the repository while keeping the existing pattern:
 
-### 1. Crie a pasta da skill
+### 1. Create the skill folder
 
-Crie uma nova pasta na raiz do projeto com um nome descritivo em snake_case:
+Create a new folder at the project root with a descriptive name in snake_case:
 
 ```
 agents_skills/
-└── minha_nova_skill/
+└── my_new_skill/
 ```
 
-### 2. Crie o `SKILL.md`
+### 2. Create the `SKILL.md`
 
-Dentro da pasta, crie um arquivo `SKILL.md` com o frontmatter obrigatório e as instruções completas da skill:
+Inside the folder, create a `SKILL.md` file with the required frontmatter and full skill instructions:
 
 ```markdown
 ---
-name: nome-da-skill
-description: Descrição clara e objetiva do que a skill faz e quando deve ser usada pelo agente.
+name: my-skill-name
+description: Clear and concise description of what the skill does and when the agent should use it.
 ---
 
-# Título da Skill
+# Skill Title
 
-Instruções detalhadas de como o agente deve executar a skill...
+Detailed instructions on how the agent should execute the skill...
 ```
 
-**Campos obrigatórios no frontmatter:**
-- `name` — identificador único em kebab-case (ex: `code-review`, `test-generator`)
-- `description` — frase que descreve **o que faz** e **quando usar**. Os agentes usam essa descrição para decidir se devem ativar a skill
+**Required frontmatter fields:**
+- `name` — unique identifier in kebab-case (e.g. `code-review`, `test-generator`)
+- `description` — sentence describing **what it does** and **when to use it**. Agents use this description to decide whether to activate the skill
 
-### 3. Adicione templates (opcional)
+### 3. Add templates (optional)
 
-Se a skill utiliza templates ou arquivos auxiliares, organize-os em uma subpasta `templates/`:
+If the skill uses templates or auxiliary files, organize them in a `templates/` subfolder:
 
 ```
-minha_nova_skill/
+my_new_skill/
 ├── SKILL.md
 └── templates/
     ├── template-a.md
     └── template-b.md
 ```
 
-### 4. Atualize este README
+### 4. Update this README
 
-Adicione uma nova entrada na seção **Available Skills** seguindo o formato:
+Add a new entry under the **Available Skills** section following this format:
 
 ```markdown
-### N. `nome_da_pasta/` — Título Curto
+### N. `folder_name/` — Short Title
 
-**Path:** `nome_da_pasta/`
-**Entry point:** `nome_da_pasta/SKILL.md`
+**Path:** `folder_name/`
+**Entry point:** `folder_name/SKILL.md`
 
-Descrição do que a skill faz e quando usá-la.
+Description of what the skill does and when to use it.
 
 **When to use:**
-- Situação 1
-- Situação 2
+- Situation 1
+- Situation 2
 
-**Included templates:** (se houver)
-- `templates/nome.md`
+**Included templates:** (if any)
+- `templates/name.md`
 ```
 
-### 5. Atualize a árvore de estrutura
+### 5. Update the structure tree
 
-Na seção **Structure** deste README, adicione a nova pasta à árvore:
+In the **Structure** section of this README, add the new folder to the tree:
 
 ```
 agents_skills/
 ├── README.md
 ├── doc_ai_skills/
-├── minha_nova_skill/    # <-- nova skill
+├── my_new_skill/        # <-- new skill
 │   ├── SKILL.md
 │   └── templates/
 └── ...
 ```
 
-### Checklist rápido
+### Quick checklist
 
 ```
-- [ ] Pasta criada na raiz com nome em snake_case
-- [ ] SKILL.md com frontmatter (name + description) e instruções completas
-- [ ] Templates em subpasta templates/ (se necessário)
-- [ ] README.md atualizado (seção Available Skills + Structure)
-- [ ] Commit e push
+- [ ] Folder created at root with a snake_case name
+- [ ] SKILL.md with frontmatter (name + description) and full instructions
+- [ ] Templates in templates/ subfolder (if needed)
+- [ ] README.md updated (Available Skills + Structure sections)
+- [ ] Commit and push
 ```
 
 ---
