@@ -35,10 +35,91 @@ Creates and maintains a standardized `.ai/` documentation structure for backend,
 
 ## How to Add a New Skill
 
-1. Create a new folder at the root with a descriptive name (e.g. `code_review_skill/`)
-2. Add a `SKILL.md` at the folder root with the standard frontmatter (`name`, `description`) and full skill instructions
-3. Include templates or auxiliary resources in subfolders as needed
-4. Update this README by adding a new entry under **Available Skills**
+Follow these steps to add uma nova skill ao repositório, mantendo o padrão existente:
+
+### 1. Crie a pasta da skill
+
+Crie uma nova pasta na raiz do projeto com um nome descritivo em snake_case:
+
+```
+agents_skills/
+└── minha_nova_skill/
+```
+
+### 2. Crie o `SKILL.md`
+
+Dentro da pasta, crie um arquivo `SKILL.md` com o frontmatter obrigatório e as instruções completas da skill:
+
+```markdown
+---
+name: nome-da-skill
+description: Descrição clara e objetiva do que a skill faz e quando deve ser usada pelo agente.
+---
+
+# Título da Skill
+
+Instruções detalhadas de como o agente deve executar a skill...
+```
+
+**Campos obrigatórios no frontmatter:**
+- `name` — identificador único em kebab-case (ex: `code-review`, `test-generator`)
+- `description` — frase que descreve **o que faz** e **quando usar**. Os agentes usam essa descrição para decidir se devem ativar a skill
+
+### 3. Adicione templates (opcional)
+
+Se a skill utiliza templates ou arquivos auxiliares, organize-os em uma subpasta `templates/`:
+
+```
+minha_nova_skill/
+├── SKILL.md
+└── templates/
+    ├── template-a.md
+    └── template-b.md
+```
+
+### 4. Atualize este README
+
+Adicione uma nova entrada na seção **Available Skills** seguindo o formato:
+
+```markdown
+### N. `nome_da_pasta/` — Título Curto
+
+**Path:** `nome_da_pasta/`
+**Entry point:** `nome_da_pasta/SKILL.md`
+
+Descrição do que a skill faz e quando usá-la.
+
+**When to use:**
+- Situação 1
+- Situação 2
+
+**Included templates:** (se houver)
+- `templates/nome.md`
+```
+
+### 5. Atualize a árvore de estrutura
+
+Na seção **Structure** deste README, adicione a nova pasta à árvore:
+
+```
+agents_skills/
+├── README.md
+├── doc_ai_skills/
+├── minha_nova_skill/    # <-- nova skill
+│   ├── SKILL.md
+│   └── templates/
+└── ...
+```
+
+### Checklist rápido
+
+```
+- [ ] Pasta criada na raiz com nome em snake_case
+- [ ] SKILL.md com frontmatter (name + description) e instruções completas
+- [ ] Templates em subpasta templates/ (se necessário)
+- [ ] README.md atualizado (seção Available Skills + Structure)
+- [ ] Commit e push
+```
 
 ---
 
