@@ -140,7 +140,7 @@ When copying, preserve the section order — agents rely on it as a map.
 2. **Explicit MUST USE / NEVER USE** — vague guidance gets ignored by agents. Pin versions and ban specific frameworks by name.
 3. **Tables over prose** for endpoints, env vars, tech stack, and roles.
 4. **Code blocks for patterns** — show the canonical handler / component / tool shape so agents can mirror it.
-5. **Language consistency** — pick one language (English or Portuguese) per project and stay with it across all `.ai/` files. Mixed languages confuse agents.
+5. **English only** — all generated documentation, file names, comments, commit messages, and section headings MUST be written in English. This applies to every `.ai/` file, template, and skill output. Do not mix languages; English is the single standard for this repository and all skills it produces.
 6. **Reference, don't deep-nest** — link directly from the instruction file to other `.ai/` files, one level deep.
 7. **Feature docs are mandatory** — every feature with a backend endpoint, a frontend route, or an agent tool gets its own `features/<name>/<name>.md` (or `features/<name>.md` for agentcore).
 8. **Old features** — move deprecated docs to `features/old-consult/` (or similar) instead of deleting; agents may need to reference past patterns.
